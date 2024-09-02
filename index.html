@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Avnish</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/31de12aa8f.js" crossorigin="anonymous"></script>
+    <!-- the icons prbuild by the website -->
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#protfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i><!-- cross icen and menu icon -->
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi,I'm <span>Avnish</span> <br> from India</h1>
+            </div>
+        </div>
+    </div>
+<!-- -------------about--------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> Aspiring software developer with a robust foundation in Python, C++, and web development,
+                        I am currently pursuing a B. Tech in Computer Science and Engineering at Vellore Institute of Technology, Bhopal.
+                        My academic journey is complemented by a CGPA of 7.68 and a continuous drive to expand my skills, including learning Dart and Flutter for app development.
+                        I am eager to apply my problem-solving abilities and cloud certifications at TCS, aiming to contribute to impactful and innovative projects.
+                        I have completed the 100 Days of Code Challenge on LeetCode, where I solved over 100 questions and am working towards solving 250+ questions.
+                        My technical expertise extends to programming languages such as HTML/CSS and JavaScript, and I possess a solid understanding of basic data structures and algorithms. Additionally,
+                        I hold certifications from AWS Academy in Cloud Foundations, Google Cloud as a Digital Leader, and have completed a course in Web Development from Masai School.
+                        Outside of academics, I have demonstrated my teamwork skills by securing first place in a college basketball tournament as part of the core team. My hobbies include reading spiritual books,
+                        playing basketball, table tennis, and chess. Fluent in both English and Hindi, I am enthusiastic about leveraging my skills and experiences in a professional setting.
+                     </p>
+
+                     <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links " onclick="opentab('experience')">Experiences</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                     </div>
+                     <!-- skills -->
+                     <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI?UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android/ios apps</li>
+                            
+                        </ul>
+                     </div>
+                     <!-- experience -->
+                     <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2018X</span><br>Designing Web/App interfaces</li>
+                            <li><span>2019</span><br>Web app Development</li>
+                            <li><span>2020</span><br>Building Android/ios apps</li>
+                            
+                        </ul>
+                     </div>
+                     <!-- education -->
+                     <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>GGPS</span><br>Designing Web/App interfaces</li>
+                            <li><span>PAS</span><br>Web app Development</li>
+                            <li><span>VIT</span><br>Building Android/ios apps</li>
+                            
+                        </ul>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- --------SERVICE -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>
+                    Welcome to my portfolio! As a dedicated software 
+                    developer with a passion for web design, I create 
+                    visually engaging and user-friendly websites using HTML
+                    , CSS, and JavaScript. My focus is on crafting responsive
+                     designs that adapt seamlessly to various devices, ensuring 
+                     a smooth and intuitive user experience. Explore my work to 
+                     see how I combine creativity with technical expertise to 
+                     deliver high-quality, customized web solutions. Feel free 
+                     to get in touch to discuss how I can help bring your web 
+                     design vision to life.
+                     <br>
+                     <a href="#">Learn more</a>
+                </p>
+            </div>
+            <!-- UI UX -->
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX</h2>
+                <p>
+                    Welcome to my portfolio! As a dedicated software 
+                    developer with a passion for web design, I create 
+                    visually engaging and user-friendly websites using HTML
+                    , CSS, and JavaScript. My focus is on crafting responsive
+                     designs that adapt seamlessly to various devices, ensuring 
+                     a smooth and intuitive user experience. Explore my work to 
+                     see how I combine creativity with technical expertise to 
+                     deliver high-quality, customized web solutions. Feel free 
+                     to get in touch to discuss how I can help bring your web 
+                     design vision to life.
+                     <br>
+                     <a href="#">Learn more</a>
+                </p>
+            </div>
+            <!-- app devlopmen -->
+
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App development</h2>
+                <p>
+                    Welcome to my portfolio! As a dedicated software 
+                    developer with a passion for web design, I create 
+                    visually engaging and user-friendly websites using HTML
+                    , CSS, and JavaScript. My focus is on crafting responsive
+                     designs that adapt seamlessly to various devices, ensuring 
+                     a smooth and intuitive user experience. Explore my work to 
+                     see how I combine creativity with technical expertise to 
+                     deliver high-quality, customized web solutions. Feel free 
+                     to get in touch to discuss how I can help bring your web 
+                     design vision to life.
+                     <br>
+                     <a href="#">Learn more</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- --------PORTFOLIO -->
+ <div id="protfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>The app connects you to the talented people 
+                        around the world.Download it from the play store.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-link"></i>  </a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p>The app connects you to the talented people 
+                        around the world.Download it from the play store.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-link"></i>  </a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Online Shopping App</h3>
+                    <p>The app connects you to the talented people 
+                        around the world.Download it from the play store.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-link"></i>  </a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+ </div>
+
+ <!-- contacts session -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-paper-plane"></i>contact@example.com</p>
+                <p><i class="fa-solid fa-phone"></i>0123456789</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100010315387240"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/AvnishP03608786"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/avnish_28.08/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/avnish-a220b0222/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Synergicvans"><i class="fa-brands fa-github-alt"></i></a>
+                </div>
+                <a href="images/mycv.pdf" download class="btn btn2">Download Cv</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+            
+        </div> 
+    </div>
+    <!-- copyright sections -->
+     <div class="copyright">
+        <p>Copyright Avnish.  <i class="fa-solid fa-heart"></i></p>
+     </div>
+</div>
+
+
+
+
+<script>
+    var tablinks=document.getElementsByClassName('tab-links');
+    var tabcontents=document.getElementsByClassName('tab-contents');
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");//it's for the selecting part of navigation only
+        document.getElementById(tabname).classList.add("active-tab");//for the content inside the navigation
+    }
+</script>
+<!-- for the menu bar for the mobile -->
+ <script>
+    var sidemeu=document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right="0";
+    }
+    function closemenu(){
+        sidemeu.style.right="-200px";
+    }
+ </script>
+
+ <!-- Excel connection part -->
+
+ <form name="submit-to-google-sheet">
+    <input name="email" type="email" placeholder="Email" required>
+    <button type="submit">Send</button>
+  </form>
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw0k2Zmajm5aWasHwzg0Sl0LCeQzoLKyWCwQM-eq3Pbw_Dp3GdLypI_h4L1tepHh5X6yw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg");//for the message part hello form submit
+     
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        // .then(response => console.log('Success!', response)) removing and modifying to get my own message
+        .then(response => {
+            msg.innerHTML="Message sent successfully"
+            setTimeout(function(){//it is used so that the message won't get displayed all the time
+                msg.innerHTML="" 
+            },3000)//after 3sec the message will removed 
+            form.reset()
+        })
+
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
