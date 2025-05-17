@@ -279,7 +279,9 @@
  </script>
 
  <!-- Excel connection part -->
-  
+
+
+    <!--
   <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbw0k2Zmajm5aWasHwzg0Sl0LCeQzoLKyWCwQM-eq3Pbw_Dp3GdLypI_h4L1tepHh5X6yw/exec'
     const form = document.forms['submit-to-google-sheet']
@@ -301,6 +303,35 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+
+    -->
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbw0k2Zmajm5aWasHwzg0Sl0LCeQzoLKyWCwQM-eq3Pbw_Dp3GdLypI_h4L1tepHh5X6yw/exec';
+  const form = document.forms['submit-to-google-sheet'];
+  const msg = document.getElementById("msg");
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    fetch(scriptURL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: new FormData(form)
+    })
+    .then(() => {
+      msg.innerHTML = "Message sent successfully";
+      setTimeout(() => {
+        msg.innerHTML = "";
+      }, 3000);
+      form.reset();
+    })
+    .catch(error => {
+      console.error('Error!', error.message);
+    });
+  });
+</script>
+
 
 </body>
 </html>
