@@ -109,6 +109,12 @@ The interface includes keyboard focus styles, reduced-motion behavior, semantic 
 
 ## Troubleshooting
 
+### Reversible card hover styling
+
+The transparent green full-card hover/focus overlay is isolated in `card-hover.css`. If the owner says **"undo card css"**, remove only the `card-hover.css` stylesheet link from `index.html` and rebuild/deploy. Preserve the existing card layout, images, headline animation, and chat behavior. This overlay does not intercept clicks.
+
+The hero's five rotating typewriter phrases live in `hero-typewriter.js`. It changes the starting phrase across reloads in the same tab, pauses in background tabs, provides a pause/resume control, and respects reduced motion. The stable screen-reader heading stays unchanged. Chat clears a successfully answered question while retaining errors and any new draft entered during a request.
+
 - **New repository absent:** check Actions logs, public visibility, nonempty content, archive/exclude settings and the next scheduled time.
 - **Daily deploy fails:** inspect the failing Actions step, confirm Pages uses GitHub Actions and the branch permits the bot's content update. A concurrent human push is never force-overwritten; rerun after it settles.
 - **AI says being connected:** add GROQ_API_KEY as a server secret, redeploy and check `/health`.

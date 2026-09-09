@@ -16,4 +16,5 @@ for (const file of ['index.html','thanks.html','style.css','enhancements.css','a
 await mkdir(path.join(root,'dist','data'),{recursive:true});
 for (const file of ['knowledge.json','assistant-config.json']) await copyFile(path.join(root,'data',file),path.join(root,'dist','data',file));
 await cp(path.join(root,'images'),path.join(root,'dist','images'),{recursive:true});
+await copyFile(path.join(root,'card-hover.css'),path.join(root,'dist','card-hover.css'));
 console.log('Build complete. All local links, assets, and anchor targets validated.');

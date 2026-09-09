@@ -1,0 +1,12 @@
+/* Optional green card overlay. "undo card css" means disable this stylesheet only. */
+.project-gallery .project{position:relative;isolation:isolate}
+.project-gallery .project::after{
+  content:'';position:absolute;inset:0;z-index:5;border-radius:inherit;
+  background:linear-gradient(145deg,rgba(125,220,91,.12),rgba(45,170,85,.32));
+  box-shadow:inset 0 0 0 1px rgba(180,242,131,.3);
+  opacity:0;transform:translateY(100%);transition:transform .38s ease,opacity .3s ease;
+  pointer-events:none;
+}
+.project-gallery .project:hover::after,
+.project-gallery .project:focus-within::after{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.project-gallery .project::after{transition:none;transform:none}}
