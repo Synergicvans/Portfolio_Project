@@ -26,6 +26,8 @@
       const result=await response.json();if(!response.ok)throw new Error(result.error || 'unavailable');
       if(current!==controller)return;
       answer.textContent=result.answer;source.textContent=`${result.cached?'Saved answer':'Generated answer'} · Groq`;
+      // Preserve any new draft typed while the previous question was processing.
+      if(payload.question && input.value.trim()===payload.question) input.value='';
     } catch(error) {
       if(current!==controller || !dialog.open)return;
       const data=await knowledge;
