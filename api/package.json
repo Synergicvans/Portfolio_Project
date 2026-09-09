@@ -1,0 +1,1 @@
+{"name":"avnish-portfolio-ai","private":true,"type":"module","scripts":{"build":"node build.mjs","db:generate":"drizzle-kit generate"},"devDependencies":{"drizzle-kit":"0.31.8","drizzle-orm":"0.45.1"}}

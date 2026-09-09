@@ -1,0 +1,10 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+const root=new URL('../',import.meta.url);
+const read=async file=>JSON.parse(await readFile(new URL(file,root),'utf8'));
+const profile=await read('data/profile.json');
+const projects=await read('projects.json');
+const metadata=await read('data/project-metadata.json');
+const data={profile,projects:projects.map(project=>({...project,...metadata.projects[project.repo]}))};
+data.version=createHash('sha256').update(JSON.stringify(data)).digest('hex');
+await writeFile(new URL('data/knowledge.json',root),JSON.stringify(data,null,2)+'\n');

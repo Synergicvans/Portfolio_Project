@@ -1,4 +1,5 @@
 import './render-projects.mjs';
+import './scripts/build-knowledge.mjs';
 import { mkdir, copyFile, readFile, access, cp } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
@@ -11,6 +12,8 @@ for (const [, href] of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
   else if (!/^[a-z]+:/i.test(href)) await access(path.join(root, href));
 }
 await mkdir(path.join(root, 'dist', 'images'), {recursive:true});
-for (const file of ['index.html','thanks.html','style.css','enhancements.css','script.js','favicon.svg','.nojekyll']) await copyFile(path.join(root,file), path.join(root,'dist',file));
+for (const file of ['index.html','thanks.html','style.css','enhancements.css','assistant.css','assistant.js','script.js','favicon.svg','.nojekyll']) await copyFile(path.join(root,file), path.join(root,'dist',file));
+await mkdir(path.join(root,'dist','data'),{recursive:true});
+for (const file of ['knowledge.json','assistant-config.json']) await copyFile(path.join(root,'data',file),path.join(root,'dist','data',file));
 await cp(path.join(root,'images'),path.join(root,'dist','images'),{recursive:true});
 console.log('Build complete. All local links, assets, and anchor targets validated.');

@@ -1,0 +1,8 @@
+{
+  "owner": "Synergicvans",
+  "exclude": [],
+  "includeForks": true,
+  "includeArchived": false,
+  "coverNames": ["portfolio-cover.png", "portfolio-cover.jpg", "portfolio-cover.webp"],
+  "maxImageBytes": 3000000
+}

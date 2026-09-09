@@ -1,0 +1,18 @@
+{
+  "name":"Avnish",
+  "headline":"Software Engineer · Full-stack development & AI applications",
+  "email":"avnish1234pandeys@gmail.com",
+  "location":"Bengaluru, India; originally from Bokaro, Jharkhand",
+  "experience":[
+    {"company":"Infosys Limited","role":"System Engineer","dates":"October 2025–present","details":"Co-developing an early-stage AI-assisted test generation framework with a senior engineer. Jira REST API integration, reusable Selenium and Playwright tests, POM, Cucumber, REST Assured, Postman, and SQL validation."},
+    {"company":"NextTechFusionGadgets","role":"Application Developer Intern","dates":"August–September 2025","details":"Resolved 10+ React Native build issues, integrated screens with REST APIs, and validated application flows."},
+    {"company":"Plypicker","role":"Software Engineer Intern","dates":"January–June 2025","details":"Validated 1,000+ product records and reduced processing time by 20% through data validation and workflow improvements."}
+  ],
+  "education":"B.Tech in Computer Science and Engineering, VIT Bhopal, 2021–2025; CGPA 8.56/10",
+  "skills":["Java","Python","SQL","React","React Native","FastAPI","MongoDB","MySQL","REST APIs","Groq API","LLM integration","GitHub Copilot CLI","scikit-learn","OpenCV","pytest","Selenium","Playwright","Cucumber","REST Assured","Postman","Git","GitHub","Jira APIs","Flutter","Dart"],
+  "certifications":["Claude Certified Architect – Professional, Anthropic, 2026","Claude Certified Developer – Foundations, Anthropic, 2026"],
+  "additionalLearning":["AWS Academy Cloud Foundations","Google Cloud Digital Leader","Masai School Web Development"],
+  "interests":["basketball","chess","table tennis","reading"],
+  "coding":"200+ problems solved across LeetCode and GeeksforGeeks",
+  "source":"Public portfolio and owner-supplied 2026 résumé. Do not infer availability, salary, private information, or unlisted achievements."
+}

@@ -1,18 +1,212 @@
 [
-  {"repo":"Loan-Data-Verification-Copilot","title":"Loan Data Verification Copilot","category":"Full-stack · AI","tags":["React","FastAPI","MongoDB"],"description":"Reconcile loan records across three source types, review Groq AI recommendations, and verify decisions with human approval and an audit trail.","image":"images/projects/loan.png","alt":"Illustration of data streams converging into verified records","featured":true,"demo":"https://loan-data-verification-copilot-7fh3.onrender.com"},
-  {"repo":"Hand_Recognition_System_for_alphabets_and_Numbers","title":"Hand Gesture Recognition","category":"Computer vision","tags":["Python","OpenCV","scikit-learn"],"description":"Recognize A–Z and 0–9 hand gestures with MediaPipe landmarks and a Random Forest classifier, using a live webcam feed.","image":"images/projects/gesture.png","alt":"Illustration of hand landmarks for gesture recognition","featured":true},
-  {"repo":"Video_Summarization_Using_phidata","title":"Video AI Summarizer","category":"AI application","tags":["Streamlit","Phidata","Gemini"],"description":"A multimodal agent that answers questions about uploaded videos and enriches its analysis with web context.","image":"images/projects/video.png","alt":"Illustration of video frames being condensed into a summary"},
-  {"repo":"nexttechfusiongadgets-mobile","title":"NextTechFusion Gadgets","category":"Mobile · Internship","tags":["React Native","TypeScript","Redux"],"description":"A tech-commerce mobile application. My internship work included fixing build issues, integrating screens with REST APIs, and validating application flows.","image":"images/projects/mobile.svg","alt":"Architecture diagram connecting mobile screens, state management, and APIs"},
-  {"repo":"Netflix_shows_analysis_SQL","title":"Netflix Content Analysis","category":"Data analysis","tags":["SQL","Tableau"],"description":"Explore a Netflix titles dataset through SQL queries covering ratings, genres, age certifications, and the distribution of content over time.","image":"images/projects/netflix.png","alt":"Netflix content analysis dashboard from the project repository","imageFit":"contain"},
-  {"repo":"Blinkit_data_analysis","title":"Blinkit Sales Analysis","category":"Data analysis","tags":["SQL","Excel","Power BI"],"description":"A grocery-sales analysis covering revenue, customer ratings, product categories, and outlet performance through SQL and dashboards.","image":"images/projects/blinkit.png","alt":"Blinkit data analysis visual from the project repository","imageFit":"contain"},
-  {"repo":"Expense_Income_Management_System","title":"Expense & Income Manager","category":"Web application","tags":["Python","Django"],"description":"A Django application with authentication and separate expense and income workflows for organizing financial records.","image":"images/projects/expenses.svg","alt":"Diagram showing income and expense records flowing into a summary"},
-  {"repo":"Notebook","title":"Notebook","category":"Web application","tags":["React","Context API","React Router"],"description":"A React notes application with sign-in and sign-up screens, shared note state, and reusable interface components.","image":"images/projects/notebook.svg","alt":"Diagram of a note with title, body, and edit controls"},
-  {"repo":"E-Commerce-Product-Catalog-App","title":"E-Commerce Product Catalog","category":"Mobile application","tags":["Flutter","Provider","REST APIs"],"description":"Browse products by category with dedicated detail screens, API services, and shared product state.","image":"images/projects/catalog.svg","alt":"Diagram of product categories connecting to a product list and detail view"},
-  {"repo":"Project-intern-1","title":"Product Explorer","category":"Mobile application","tags":["Flutter","Dart","Provider"],"description":"An earlier product-list app with refresh controls, product images, and a dialog for viewing product details.","image":"images/work-5.png","alt":"Product Explorer displaying a headphone item in a detail dialog"},
-  {"repo":"Weather_App","title":"Weather App","category":"Mobile application","tags":["Flutter","Dart","OpenWeatherMap"],"description":"A cross-platform weather project with current conditions, hourly forecast components, and additional weather details.","image":"images/work-3.png","alt":"Weather project artwork with a phone displaying weather symbols"},
-  {"repo":"Currency_convertor_app","title":"Currency Converter","category":"Mobile application","tags":["Flutter","Dart"],"description":"A focused USD-to-INR conversion app built with Flutter. This learning project uses a fixed conversion rate.","image":"images/work-4.png","alt":"Currency conversion project artwork"},
-  {"repo":"BMI_CALCULATOR","title":"BMI Calculator","category":"Web application","tags":["HTML","CSS","JavaScript"],"description":"A small interactive web project that calculates body mass index from height and weight inputs.","image":"images/work-2.png","alt":"BMI calculator project artwork","demo":"https://synergicvans.github.io/BMI_CALCULATOR/"},
-  {"repo":"Tic-Tak-Toe","title":"Tic-Tac-Toe","category":"Python · Learning","tags":["Python","Game logic"],"description":"A two-player terminal game with a numbered board, alternating turns, and checks for winning combinations.","image":"images/projects/tictactoe.svg","alt":"Tic-tac-toe grid showing an example winning line"},
-  {"repo":"Leetcode_daily_problem","title":"Daily Problem Solving","category":"Algorithms · Learning","tags":["Algorithms","SQL","Practice"],"description":"A growing collection of coding solutions and SQL exercises, covering problem solving and database query patterns.","image":"images/projects/algorithms.svg","alt":"Diagram of a binary search narrowing a sorted sequence"},
-  {"repo":"Portfolio_Project","title":"Personal Portfolio","category":"Web application","tags":["HTML","CSS","JavaScript"],"description":"My home on the web: professional experience, projects, certifications, and a way to get in touch.","image":"images/work-1.png","alt":"Personal portfolio project artwork"}
+  {
+    "repo": "Loan-Data-Verification-Copilot",
+    "title": "Loan Data Verification Copilot",
+    "category": "Full-stack · AI",
+    "tags": [
+      "React",
+      "FastAPI",
+      "MongoDB"
+    ],
+    "description": "Reconcile loan records across three source types, review Groq AI recommendations, and verify decisions with human approval and an audit trail.",
+    "image": "images/projects/loan.png",
+    "alt": "Illustration of data streams converging into verified records",
+    "featured": true,
+    "demo": "https://loan-data-verification-copilot-7fh3.onrender.com"
+  },
+  {
+    "repo": "Hand_Recognition_System_for_alphabets_and_Numbers",
+    "title": "Hand Gesture Recognition",
+    "category": "Computer vision",
+    "tags": [
+      "Python",
+      "OpenCV",
+      "scikit-learn"
+    ],
+    "description": "Recognize A–Z and 0–9 hand gestures with MediaPipe landmarks and a Random Forest classifier, using a live webcam feed.",
+    "image": "images/projects/gesture.png",
+    "alt": "Illustration of hand landmarks for gesture recognition",
+    "featured": true
+  },
+  {
+    "repo": "Video_Summarization_Using_phidata",
+    "title": "Video AI Summarizer",
+    "category": "AI application",
+    "tags": [
+      "Streamlit",
+      "Phidata",
+      "Gemini"
+    ],
+    "description": "A multimodal agent that answers questions about uploaded videos and enriches its analysis with web context.",
+    "image": "images/projects/video.png",
+    "alt": "Illustration of video frames being condensed into a summary"
+  },
+  {
+    "repo": "nexttechfusiongadgets-mobile",
+    "title": "NextTechFusion Gadgets",
+    "category": "Mobile · Internship",
+    "tags": [
+      "React Native",
+      "TypeScript",
+      "Redux"
+    ],
+    "description": "A tech-commerce mobile application. My internship work included fixing build issues, integrating screens with REST APIs, and validating application flows.",
+    "image": "images/projects/mobile.svg",
+    "alt": "Architecture diagram connecting mobile screens, state management, and APIs"
+  },
+  {
+    "repo": "Netflix_shows_analysis_SQL",
+    "title": "Netflix Content Analysis",
+    "category": "Data analysis",
+    "tags": [
+      "SQL",
+      "Tableau"
+    ],
+    "description": "Explore a Netflix titles dataset through SQL queries covering ratings, genres, age certifications, and the distribution of content over time.",
+    "image": "images/projects/netflix.png",
+    "alt": "Netflix content analysis dashboard from the project repository",
+    "imageFit": "contain"
+  },
+  {
+    "repo": "Blinkit_data_analysis",
+    "title": "Blinkit Sales Analysis",
+    "category": "Data analysis",
+    "tags": [
+      "SQL",
+      "Excel",
+      "Power BI"
+    ],
+    "description": "A grocery-sales analysis covering revenue, customer ratings, product categories, and outlet performance through SQL and dashboards.",
+    "image": "images/projects/blinkit.png",
+    "alt": "Blinkit data analysis visual from the project repository",
+    "imageFit": "contain"
+  },
+  {
+    "repo": "Expense_Income_Management_System",
+    "title": "Expense & Income Manager",
+    "category": "Web application",
+    "tags": [
+      "Python",
+      "Django"
+    ],
+    "description": "A Django application with authentication and separate expense and income workflows for organizing financial records.",
+    "image": "images/projects/expenses.svg",
+    "alt": "Diagram showing income and expense records flowing into a summary"
+  },
+  {
+    "repo": "Notebook",
+    "title": "Notebook",
+    "category": "Web application",
+    "tags": [
+      "React",
+      "Context API",
+      "React Router"
+    ],
+    "description": "A React notes application with sign-in and sign-up screens, shared note state, and reusable interface components.",
+    "image": "images/projects/notebook.svg",
+    "alt": "Diagram of a note with title, body, and edit controls"
+  },
+  {
+    "repo": "E-Commerce-Product-Catalog-App",
+    "title": "E-Commerce Product Catalog",
+    "category": "Mobile application",
+    "tags": [
+      "Flutter",
+      "Provider",
+      "REST APIs"
+    ],
+    "description": "Browse products by category with dedicated detail screens, API services, and shared product state.",
+    "image": "images/projects/catalog.svg",
+    "alt": "Diagram of product categories connecting to a product list and detail view"
+  },
+  {
+    "repo": "Project-intern-1",
+    "title": "Product Explorer",
+    "category": "Mobile application",
+    "tags": [
+      "Flutter",
+      "Dart",
+      "Provider"
+    ],
+    "description": "An earlier product-list app with refresh controls, product images, and a dialog for viewing product details.",
+    "image": "images/work-5.png",
+    "alt": "Product Explorer displaying a headphone item in a detail dialog"
+  },
+  {
+    "repo": "Weather_App",
+    "title": "Weather App",
+    "category": "Mobile application",
+    "tags": [
+      "Flutter",
+      "Dart",
+      "OpenWeatherMap"
+    ],
+    "description": "A cross-platform weather project with current conditions, hourly forecast components, and additional weather details.",
+    "image": "images/work-3.png",
+    "alt": "Weather project artwork with a phone displaying weather symbols"
+  },
+  {
+    "repo": "Currency_convertor_app",
+    "title": "Currency Converter",
+    "category": "Mobile application",
+    "tags": [
+      "Flutter",
+      "Dart"
+    ],
+    "description": "A focused USD-to-INR conversion app built with Flutter. This learning project uses a fixed conversion rate.",
+    "image": "images/work-4.png",
+    "alt": "Currency conversion project artwork"
+  },
+  {
+    "repo": "BMI_CALCULATOR",
+    "title": "BMI Calculator",
+    "category": "Web application",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "description": "A small interactive web project that calculates body mass index from height and weight inputs.",
+    "image": "images/work-2.png",
+    "alt": "BMI calculator project artwork",
+    "demo": "https://synergicvans.github.io/BMI_CALCULATOR/"
+  },
+  {
+    "repo": "Tic-Tak-Toe",
+    "title": "Tic-Tac-Toe",
+    "category": "Python · Learning",
+    "tags": [
+      "Python",
+      "Game logic"
+    ],
+    "description": "A two-player terminal game with a numbered board, alternating turns, and checks for winning combinations.",
+    "image": "images/projects/tictactoe.svg",
+    "alt": "Tic-tac-toe grid showing an example winning line"
+  },
+  {
+    "repo": "Leetcode_daily_problem",
+    "title": "Daily Problem Solving",
+    "category": "Algorithms · Learning",
+    "tags": [
+      "Algorithms",
+      "SQL",
+      "Practice"
+    ],
+    "description": "A growing collection of coding solutions and SQL exercises, covering problem solving and database query patterns.",
+    "image": "images/projects/algorithms.svg",
+    "alt": "Diagram of a binary search narrowing a sorted sequence"
+  },
+  {
+    "repo": "Portfolio_Project",
+    "title": "Personal Portfolio",
+    "category": "Web application",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "description": "My home on the web: professional experience, projects, certifications, and a way to get in touch.",
+    "image": "images/work-1.png",
+    "alt": "Personal portfolio project artwork"
+  }
 ]

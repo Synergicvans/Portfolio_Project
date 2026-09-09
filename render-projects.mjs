@@ -13,7 +13,7 @@ export const projectCards = projects.map((project, index) => {
   <div class="project-body"><div class="project-meta"><span>${String(index + 1).padStart(2,'0')} / ${escape(project.category)}</span></div>
   <h3><a href="${url}" target="_blank" rel="noopener noreferrer">${escape(project.title)}</a></h3><p>${escape(project.description)}</p>
   <div class="tags">${project.tags.map(tag => `<span>${escape(tag)}</span>`).join('')}</div>
-  <div class="project-links"><a href="${url}" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a>${project.demo ? `<a href="${escape(project.demo)}" target="_blank" rel="noopener noreferrer">Live demo <span aria-hidden="true">↗</span></a>` : ''}</div></div></article>`;
+  <div class="project-links"><a href="${url}" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a>${project.demo ? `<a href="${escape(project.demo)}" target="_blank" rel="noopener noreferrer">Live demo <span aria-hidden="true">↗</span></a>` : ''}</div><button class="ai-summary" type="button" data-ai-summary="${escape(project.repo)}">Ask summary with AI ↗</button></div></article>`;
 }).join('\n');
 const file = path.join(root,'index.html');
 const html = await readFile(file,'utf8');
