@@ -44,10 +44,10 @@ activateTab(tabs[0]);
 document.getElementById('year').textContent = new Date().getFullYear();
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
-form.hidden = false;
+// The native form action also works when JavaScript is disabled.
 form.addEventListener('submit', async event => {
   event.preventDefault();
-  if (!form.reportValidity()) return;
+  if (!form.reportValidity() || form.elements._honey.value) return;
   const submit = form.querySelector('button[type="submit"]');
   if (submit.disabled) return;
   submit.disabled = true;
@@ -55,10 +55,20 @@ form.addEventListener('submit', async event => {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 15000);
   try {
-    await fetch('https://script.google.com/macros/s/AKfycbw0k2Zmajm5aWasHwzg0Sl0LCeQzoLKyWCwQM-eq3Pbw_Dp3GdLypI_h4L1tepHh5X6yw/exec', {method:'POST', mode:'no-cors', body:new FormData(form), signal:controller.signal});
-    // An opaque response from the existing endpoint cannot confirm receipt.
-    status.textContent = 'Your request was submitted, but delivery cannot be confirmed. For a reliable follow-up, please email me directly. Your message is kept here so you can copy it.';
+    const data = Object.fromEntries(new FormData(form));
+    const response = await fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+      method: 'POST', headers: {'Content-Type':'application/json', 'Accept':'application/json'},
+      body: JSON.stringify(data), signal: controller.signal
+    });
+    const result = await response.json();
+    if (/activat|confirm.*email|verify.*email/i.test(result.message || '')) {
+      status.textContent = 'Email delivery is awaiting activation. Please email me directly using the link below. Your message has been kept here.';
+    } else {
+      if (!response.ok || (result.success !== true && result.success !== 'true')) throw new Error('Submission was not accepted');
+      status.textContent = 'Your message has been submitted. Thank you for getting in touch!';
+      form.reset();
+    }
   } catch {
-    status.textContent = 'Delivery could not be confirmed. Please use the email link instead. Your message is still here so you can copy it.';
+    status.textContent = 'Your message could not be confirmed. Please email avnish1234pandeys@gmail.com directly. Your message is still here so you can copy it.';
   } finally { clearTimeout(timeout); submit.disabled = false; }
 });
