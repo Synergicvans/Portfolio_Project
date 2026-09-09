@@ -8,7 +8,14 @@
   document.body.append(launcher,dialog);
   const answer=dialog.querySelector('.assistant-answer'),source=dialog.querySelector('.assistant-source'),form=dialog.querySelector('form'),input=form.querySelector('input'),submit=form.querySelector('button');
   let controller,returnFocus;
-  const config=fetch('data/assistant-config.json').then(r=>{if(!r.ok)throw Error();return r.json();}).catch(()=>({apiBase:''}));
+  // Retry configuration on every question; a transient failure must not poison this tab.
+  async function loadConfig(signal) {
+    const response=await fetch('data/assistant-config.json',{cache:'no-store',signal});
+    if(!response.ok)throw new Error('config_unavailable');
+    const config=await response.json();
+    if(!config.apiBase)throw new Error('config_unavailable');
+    return config;
+  }
   const knowledge=fetch('data/knowledge.json').then(r=>{if(!r.ok)throw Error();return r.json();}).catch(()=>null);
   function open(trigger) {returnFocus=trigger;if(!dialog.open)dialog.showModal();input.focus();}
   function close() {controller?.abort();dialog.close();submit.disabled=false;returnFocus?.focus();}
@@ -20,8 +27,7 @@
     controller?.abort();const current=new AbortController();controller=current;
     const timeout=setTimeout(()=>current.abort(),35000);submit.disabled=true;answer.textContent='Thinking…';source.textContent='';
     try {
-      const {apiBase}=await config;
-      if(!apiBase)throw new Error('not_configured');
+      const {apiBase}=await loadConfig(current.signal);
       const response=await fetch(`${apiBase.replace(/\/$/,'')}/api/${payload.repo?'summary':'chat'}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),signal:current.signal});
       const result=await response.json();if(!response.ok)throw new Error(result.error || 'unavailable');
       if(current!==controller)return;
