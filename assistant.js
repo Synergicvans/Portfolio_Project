@@ -39,7 +39,8 @@
       const data=await knowledge;
       if(current!==controller || !dialog.open)return;
       const project=payload.repo&&data?.projects.find(p=>p.repo===payload.repo);
-      answer.textContent=project?.summary || messages[error.message] || 'The assistant is temporarily unavailable. Please try again shortly.';
+      const detail=error.name==='AbortError'?'The request timed out. Please try again.':error instanceof TypeError?'Could not reach the assistant. Check your connection and try again.':error.message==='config_unavailable'?'Could not load the assistant settings. Please try again.':messages[error.message] || 'The AI service could not complete this request. Please try again shortly.';
+      answer.textContent=project?.summary || detail;
       source.textContent=project?'Portfolio overview · AI summary currently unavailable':'';
     } finally {clearTimeout(timeout);if(current===controller)submit.disabled=false;}
   }
